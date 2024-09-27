@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My comutes</title>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+</head>
+
+<body>
+    <h1>My commutes</h1>
+    <ul id="commutes"></ul>
+
+    <script type="module">
+        let client = contentful.createClient({
+            space: '80c03r0wfd8q',
+            accessToken: 'D_yGVdTeebDfEbT-cM-TeNGDP5zXp3e7ResHmbzbG9w',
+        });
+
+        // get a single entry for test purposes
+        client.getEntry('77diT7sYpw40EEjhww5NDC').then(function (entry) {
+            // logs the entry metadata
+            console.log(entry.sys);
+
+            // logs all fields
+            console.log(entry.fields);
+        });
+
+        // get all entries of type 'commute'
+        let commutes = await client.getEntries({
+            content_type: 'commute'
+        });
+
+        commutes.items.forEach(function (commute) {
+            // build a list item for each commute
+            let html = `<li>
+                <h2>${commute.fields.person.fields.firstname} ${commute.fields.person.fields.lastname}'s commute </h2>
+                <img src="${commute.fields.person.fields.photo.fields.file.url}" width="600px"/>
+                </li>`;
+
+            // append the list item to the list
+            document.querySelector("#commutes").innerHTML = document.querySelector("#commutes").innerHTML + html;
+
+
+        });
+
+        console.log(commutes);
+
+
+    </script>
+
+</body>
+
+</html>
