@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.121" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-11-13T08:43:22" tests="0" file="cypress\e2e\commutes.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="App displays Maria&apos;s commutes" timestamp="2024-11-13T08:43:22" tests="1" time="0.868" failures="0">
+    <testcase name="App displays Maria&apos;s commutes visits the app root url" time="0.841" classname="visits the app root url">
+    </testcase>
+  </testsuite>
+  <testsuite name="Can navigate to about page" timestamp="2024-11-13T08:43:23" tests="1" time="0.250" failures="0">
+    <testcase name="Can navigate to about page visits the app root url" time="0.222" classname="visits the app root url">
+    </testcase>
+  </testsuite>
+</testsuites>

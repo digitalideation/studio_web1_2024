@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.318" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-11-13T08:43:25" tests="0" file="cypress\e2e\hslu.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Searching" timestamp="2024-11-13T08:43:25" tests="2" time="8.316" failures="0">
+    <testcase name="Searching Finds Maria Husmann as the first search result." time="4.501" classname="Finds Maria Husmann as the first search result.">
+    </testcase>
+    <testcase name="Searching Navigates from search results to profile page" time="1.746" classname="Navigates from search results to profile page">
+    </testcase>
+  </testsuite>
+</testsuites>
